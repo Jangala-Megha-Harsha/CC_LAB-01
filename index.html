@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Portfolio</title>
+  <style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1e1e1e);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ccc;
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    header button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      background: #00ffaa;
+      color: #111;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    header button:hover {
+      transform: scale(1.1);
+      background: #00ffcc;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #00ffaa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,255,170,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      background: #111;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hello, I'm <span style="color:#00ffaa;">Anonymous</span></h1>
+    <p>A creative soul building digital experiences ✨</p>
+    <button onclick="scrollToSection('projects')">See My Work</button>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; color:#bbb;">
+      I am an anonymous creator who loves blending design and code.  
+      My focus is on crafting smooth, modern, and immersive user experiences.  
+      This portfolio is a glimpse into what I can build — sleek, minimal, and engaging.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>🚀 Project One</h3>
+        <p>A futuristic web app with smooth interactions.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Project Two</h3>
+        <p>A creative design experiment with animations.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Project Three</h3>
+        <p>A fast and responsive website for modern users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align:center; color:#bbb;">
+      Want to collaborate? Drop a message at  
+      <a href="#" style="color:#00ffaa; text-decoration:none;">anonymous@email.com</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Anonymous. Crafted with ❤️ and creativity.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({behavior: "smooth"});
+    }
+  </script>
+
+</body>
+</html>
